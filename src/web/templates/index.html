@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVAŞAN İHA | C2 COMMAND CENTER</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">TEKNOFEST 2026</div>
+        <div class="system-status">SYSTEM STATUS: <span id="conn-status" class="online">ONLINE</span></div>
+        <div class="time" id="current-time">00:00:00</div>
+    </div>
+
+    <div class="dashboard">
+        <!-- Telemetry Panel -->
+        <div class="panel telemetry">
+            <div class="panel-header">REAL-TIME TELEMETRY</div>
+            <div class="tel-grid">
+                <div class="tel-item">
+                    <label>ALTITUDE</label>
+                    <div class="value"><span id="alt">0.0</span> m</div>
+                </div>
+                <div class="tel-item">
+                    <label>AIRSPEED</label>
+                    <div class="value"><span id="speed">0.0</span> m/s</div>
+                </div>
+                <div class="tel-item">
+                    <label>PITCH</label>
+                    <div class="value"><span id="pitch">0.0</span>°</div>
+                </div>
+                <div class="tel-item">
+                    <label>MODE</label>
+                    <div class="mode-value" id="mode">STABILIZE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Radar / Visual Target Panel -->
+        <div class="panel target-vision">
+            <div class="panel-header">TARGET TRACKING DATA</div>
+            <div class="radar-sim">
+                <div class="crosshair"></div>
+                <div class="target-locked" id="target-lock">TARGET ACQUIRED</div>
+            </div>
+        </div>
+
+        <!-- Command Panel -->
+        <div class="panel commands">
+            <div class="panel-header">MISSION CONTROL</div>
+            <div class="cmd-group">
+                <button onclick="sendCommand('arm')">ARM VEHICLE</button>
+                <button onclick="sendCommand('takeoff')" class="danger">AUTO TAKEOFF</button>
+                <button onclick="sendCommand('mission')" class="warning">START MISSION</button>
+                <button onclick="sendCommand('rtl')">RETURN TO HOME</button>
+            </div>
+        </div>
+
+        <!-- Console -->
+        <div class="panel full-width console">
+            <div class="panel-header">TACTICAL CONSOLE</div>
+            <div id="log-box" class="log-content">
+                [SYSTEM] Centralized Command Center Initialized...<br>
+                [SYSTEM] MAVLink Bridge Established...<br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+
+        socket.on('telemetry', (data) => {
+            document.getElementById('alt').innerText = data.alt?.toFixed(1) || "0.0";
+            document.getElementById('speed').innerText = data.airspeed?.toFixed(1) || "0.0";
+            document.getElementById('pitch').innerText = data.pitch?.toFixed(1) || "0.0";
+            document.getElementById('mode').innerText = data.mode || "UNKNOWN";
+        });
+
+        function sendCommand(cmd) {
+            socket.emit('command', cmd);
+            const logBox = document.getElementById('log-box');
+            logBox.innerHTML += `[CMD] Executing: ${cmd.toUpperCase()}...<br>`;
+            logBox.scrollTop = logBox.scrollHeight;
+        }
+
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('current-time').innerText = now.toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>

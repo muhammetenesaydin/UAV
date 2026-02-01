@@ -1,0 +1,10 @@
+Proje: Savaşan İha - Simülasyno
+Versiyon: v?.0
+İçerik: Gazebo simülasyon içeriği
+Durum:  Çalışıyor 
+Son Güncelleme : 22 Mart 2025
+
+
+ortam kurulumu için ubuntu 20.04 kurulumu sonrası iha_gazebo dosyasını  indirip içindeki install_helper içerikleri takip edilmeli
+
+simülasyon dosyası yanında kamera eklentili cessna modeli de var .

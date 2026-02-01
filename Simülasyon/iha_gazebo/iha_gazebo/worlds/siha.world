@@ -1,0 +1,1636 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-7.77599 18.1628 9.7853 0 0.661353 -0.835229</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+      <plugin name='keyboard' filename='libKeyboardGUIPlugin.so'/>
+    </gui>
+    <physics name='default_physics' default='0' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>400</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>5</speed>
+        </clouds>
+      </sky>
+      <ambient>0.95 0.95 0.95 1</ambient>
+      <background>0.3 0.3 0.3 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>3599 482500000</sim_time>
+      <real_time>63 671308300</real_time>
+      <wall_time>1718235619 297001602</wall_time>
+      <iterations>18016</iterations>
+      <model name='cessna_with_camera'>
+        <pose>-3.06177 7.81253 0.024387 0 -2e-06 0</pose>
+        <scale>1 1 1</scale>
+        <link name='cessna_with_camera/base_link'>
+          <pose>-3.06177 7.81253 0.024387 0 -2e-06 0</pose>
+          <velocity>-0 0 -0 -0 -0 -0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='cessna_with_camera/elevators'>
+          <pose>-3.61677 7.81253 0.081386 0 -2e-06 0</pose>
+          <velocity>-0 0 -0 -0 -0 -0</velocity>
+          <acceleration>-0 -0 0 0 -0 0</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='cessna_with_camera/imu_link'>
+          <pose>-3.06177 7.81253 0.024387 0 -2e-06 0</pose>
+          <velocity>-0 0 -0 -0 -0 -0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='cessna_with_camera/left_aileron'>
+          <pose>-3.20677 8.18253 0.174386 0.05 -2e-06 -0.12</pose>
+          <velocity>-0 0 -0 -0 -0 -0</velocity>
+          <acceleration>-0 -0 -0 0 -0 0</acceleration>
+          <wrench>-0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='cessna_with_camera/propeller'>
+          <pose>-2.88277 7.81253 0.109887 1.7109 -2e-06 0</pose>
+          <velocity>-0 0 -0 -0 -0 -0</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='cessna_with_camera/right_aileron'>
+          <pose>-3.20677 7.44253 0.174386 -0.05 -2e-06 0.12</pose>
+          <velocity>-0 0 -0 0 -0 0</velocity>
+          <acceleration>0 -0 -0 0 -0 0</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='cessna_with_camera/rudder'>
+          <pose>-3.57177 7.81253 0.349386 0 -0.350002 0</pose>
+          <velocity>-0 0 -0 0 -0 0</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='square_qr'>
+        <pose>9.63868 -49.8853 0.009449 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>9.63868 -49.8853 0.009449 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='thequickbrownfoxjumpsoverthelazydog_l'>
+        <pose>18.104 -37.7242 0.199323 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>18.104 -37.7242 0.199323 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='zephyr_1'>
+        <pose>9.99994 8 0.034954 1.1e-05 -2e-06 6.3e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='skid_pad'>
+          <pose>9.99995 7.93 0.014955 1.3e-05 1.1e-05 6.3e-05</pose>
+          <velocity>0.000218 3.1e-05 2.2e-05 -1.8e-05 0.008792 1.3e-05</velocity>
+          <acceleration>0.176853 0.051984 -0.05761 -1.97765 0.833028 0.009185</acceleration>
+          <wrench>0.017685 0.005198 -0.005761 0 -0 0</wrench>
+        </link>
+        <link name='zephyr_delta_wing::flap_left'>
+          <pose>10.4545 8.23419 0.222953 -0.501865 -0.157593 0.040537</pose>
+          <velocity>-0.000149 0.000932 7e-05 -0.001089 -0.001427 -1.1e-05</velocity>
+          <acceleration>-0.088583 0.438572 0.076585 -1.89203 -1.43374 -0.007337</acceleration>
+          <wrench>-0.008858 0.043857 0.007659 0 -0 0</wrench>
+        </link>
+        <link name='zephyr_delta_wing::flap_right'>
+          <pose>9.54533 8.23413 0.222952 -0.501854 0.157585 -0.040408</pose>
+          <velocity>-0.000137 0.000918 -0.001714 -0.002189 -0.001903 -1.1e-05</velocity>
+          <acceleration>-0.086917 0.459653 -1.25497 -1.8541 -1.36678 -0.0046</acceleration>
+          <wrench>-0.008692 0.045965 -0.125497 0 -0 0</wrench>
+        </link>
+        <link name='zephyr_delta_wing::propeller'>
+          <pose>9.99994 8.07 0.242955 0.004047 1.56819 0.00411</pose>
+          <velocity>-0.00018 0.000957 -0.000439 -0.00235 -1.3e-05 -1.2e-05</velocity>
+          <acceleration>-0.121511 0.485527 -0.294753 1.9474 -0.022892 -0.531512</acceleration>
+          <wrench>-0.006076 0.024276 -0.014738 0 -0 0</wrench>
+        </link>
+        <link name='zephyr_delta_wing::wing'>
+          <pose>9.99994 8 0.234954 1.1e-05 -2e-06 6.3e-05</pose>
+          <velocity>-0.00017 0.000939 -0.000275 -0.002353 -0.001842 -1e-05</velocity>
+          <acceleration>-0.117997 0.471252 0.043875 -1.78202 -1.40142 -0.023637</acceleration>
+          <wrench>-0.176996 0.706879 0.065813 0 -0 0</wrench>
+        </link>
+        <link name='zephyr_delta_wing::zephyr/imu_link'>
+          <pose>9.99994 8 0.234954 1.1e-05 -2e-06 6.3e-05</pose>
+          <velocity>-0.00017 0.000939 -0.000275 -0.002353 -0.001842 -1e-05</velocity>
+          <acceleration>-0.115164 0.471256 -0.169939 -1.78179 -1.40139 -0.023632</acceleration>
+          <wrench>-0.017275 0.070688 -0.025491 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>1865.5 2039.39 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50000 50000</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='grass'>
+          <pose>0 0 -0.1 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10000 10000</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grass</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>1</kinematic>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>1865.5 2039.39 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='square_qr'>
+      <pose>9.63868 -49.8853 1 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>6 6 0.001</scale>
+              <uri>model://square_qr/meshes/square_qr.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/White</name>
+              <uri>__default__</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='thequickbrownfoxjumpsoverthelazydog_l'>
+      <pose>18.104 -37.7242 1 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 1e-06</scale>
+              <uri>model://QR_03/meshes/thequickbrownfoxjumpsoverthelazydog_l.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>__default__</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='cessna_with_camera'>
+      <link name='cessna_with_camera/base_link'>
+        <inertial>
+          <pose>-0.00391 0 0.09273 0 -0 0</pose>
+          <mass>4.001</mass>
+          <inertia>
+            <ixx>0.128638</ixx>
+            <ixy>0</ixy>
+            <ixz>-2.83339e-05</ixz>
+            <iyy>0.18283</iyy>
+            <iyz>0</iyz>
+            <izz>0.26782</izz>
+          </inertia>
+        </inertial>
+        <sensor name='cam' type='camera'>
+          <pose>0.179 0 0.0855 0 -0 0</pose>
+          <camera>
+            <horizontal_fov>1.2</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>5000</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>41</update_rate>
+          <visualize>0</visualize>
+          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+            <always_on>1</always_on>
+            <update_rate>41</update_rate>
+            <cameraName>cessna</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>camera_link</frameName>
+          </plugin>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <pose>0 0 0 -0 -0 -0</pose>
+        <visual name='cessna_with_camera/base_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://cessna/meshes/body.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+        <collision name='cessna_with_camera/base_link_collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.5 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.1</mu>
+                <mu2>0.1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='cessna_with_camera/elevators'>
+        <pose>-0.555 -0 0.057 -0 -0 -0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>0.0038166</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0036</iyy>
+            <iyz>0</iyz>
+            <izz>0.003816</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='cessna_with_camera/elevators_visual'>
+          <pose>0.555 0 -0.057 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://cessna/meshes/elevators.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+      </link>
+      <link name='cessna_with_camera/imu_link'>
+        <pose>0 0 0 -0 -0 -0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.15</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2e-05</iyy>
+            <iyz>0</iyz>
+            <izz>3e-05</izz>
+          </inertia>
+        </inertial>
+        <sensor name='imu_sensor' type='imu'>
+          <pose>0 0 0 -3.14159 -0 0</pose>
+          <always_on>1</always_on>
+          <update_rate>1000</update_rate>
+          <imu/>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='cessna_with_camera/left_aileron'>
+        <pose>-0.145 0.37 0.15 0.05 -0 -0.12</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>0.0038166</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0036</iyy>
+            <iyz>0</iyz>
+            <izz>0.003816</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='cessna_with_camera/left_aileron_visual'>
+          <pose>0.195 -0.36 -0.12 -0.05 -0 0.12</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://cessna/meshes/left_aileron.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+      </link>
+      <link name='cessna_with_camera/propeller'>
+        <pose>0.179 -0 0.0855 -0 -0 -0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.025</mass>
+          <inertia>
+            <ixx>7.5067e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>7.515e-05</iyy>
+            <iyz>0</iyz>
+            <izz>6.8275e-07</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='cessna_with_camera/propeller_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://cessna/meshes/cessna_prop.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+      </link>
+      <link name='cessna_with_camera/right_aileron'>
+        <pose>-0.145 -0.37 0.15 -0.05 -0 0.12</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>0.0038166</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0036</iyy>
+            <iyz>0</iyz>
+            <izz>0.003816</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='cessna_with_camera/right_aileron_visual'>
+          <pose>0.195 0.36 -0.12 0.05 -0 -0.12</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://cessna/meshes/right_aileron.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+      </link>
+      <link name='cessna_with_camera/rudder'>
+        <pose>-0.51 0 0.325 0 -0.35 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>0.0038166</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0036</iyy>
+            <iyz>0</iyz>
+            <izz>0.003816</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='cessna_with_camera/rudder_visual'>
+          <pose>0.36 0 -0.475 0 0.35 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://cessna/meshes/rudder.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+      </link>
+      <joint name='cessna_with_camera/elevators_joint' type='revolute'>
+        <parent>cessna_with_camera/base_link</parent>
+        <child>cessna_with_camera/elevators</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='cessna_with_camera/imu_joint' type='revolute'>
+        <parent>cessna_with_camera/base_link</parent>
+        <child>cessna_with_camera/imu_link</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0</upper>
+            <effort>0</effort>
+            <velocity>0</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>1</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='cessna_with_camera/left_aileron_joint' type='revolute'>
+        <parent>cessna_with_camera/base_link</parent>
+        <child>cessna_with_camera/left_aileron</child>
+        <pose>0 0 -0 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='cessna_with_camera/propeller_joint' type='revolute'>
+        <parent>cessna_with_camera/base_link</parent>
+        <child>cessna_with_camera/propeller</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='cessna_with_camera/right_aileron_joint' type='revolute'>
+        <parent>cessna_with_camera/base_link</parent>
+        <child>cessna_with_camera/right_aileron</child>
+        <pose>0 -0 -0 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='cessna_with_camera/rudder_joint' type='revolute'>
+        <parent>cessna_with_camera/base_link</parent>
+        <child>cessna_with_camera/rudder</child>
+        <pose>-0 0 0 0 -0 0</pose>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <plugin name='cessna_with_camera_arduplane_plugin' filename='libArduPilotPlugin.so'>
+        <fdm_addr>127.0.0.1</fdm_addr>
+        <fdm_port_in>9002</fdm_port_in>
+        <fdm_port_out>9003</fdm_port_out>
+        <modelXYZToAirplaneXForwardZDown>0 0 0 0 0 0</modelXYZToAirplaneXForwardZDown>
+        <gazeboXYZToNED>0 0 0 3.141593 0 0</gazeboXYZToNED>
+        <imuName>cessna_with_camera/imu_link::imu_sensor</imuName>
+        <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+        <control channel='2'>
+          <type>VELOCITY</type>
+          <offset>0</offset>
+          <p_gain>.1</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.5</cmd_max>
+          <cmd_min>0</cmd_min>
+          <jointName>cessna_with_camera/propeller_joint</jointName>
+          <multiplier>838</multiplier>
+          <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
+        </control>
+        <control channel='0'>
+          <type>POSITION</type>
+          <offset>-0.5</offset>
+          <p_gain>2.00</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>1.50</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>1.0</cmd_max>
+          <cmd_min>-1.0</cmd_min>
+          <multiplier>-1</multiplier>
+          <jointName>cessna_with_camera/left_aileron_joint</jointName>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <control channel='0'>
+          <type>POSITION</type>
+          <offset>-0.5</offset>
+          <p_gain>2.00</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>1.50</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>1.0</cmd_max>
+          <cmd_min>-1.0</cmd_min>
+          <multiplier>1</multiplier>
+          <jointName>cessna_with_camera/right_aileron_joint</jointName>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <control channel='1'>
+          <type>POSITION</type>
+          <offset>-0.5</offset>
+          <p_gain>2.00</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>1.50</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>1.0</cmd_max>
+          <cmd_min>-1.0</cmd_min>
+          <multiplier>1</multiplier>
+          <jointName>cessna_with_camera/elevators_joint</jointName>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <control channel='3'>
+          <type>POSITION</type>
+          <offset>-0.5</offset>
+          <p_gain>2.00</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>1.50</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>1.0</cmd_max>
+          <cmd_min>-1.0</cmd_min>
+          <multiplier>1</multiplier>
+          <jointName>cessna_with_camera/rudder_joint</jointName>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <plugin name='elevators_plugin' filename='libLiftDragPlugin.so'>
+        <forward>1 0 0</forward>
+        <link_name>cessna_with_camera/base_link</link_name>
+        <control_joint_name>cessna_with_camera/elevators_joint</control_joint_name>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <plugin name='left_aileron_plugin' filename='libLiftDragPlugin.so'>
+        <a0>0.05984281113</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.1 0.2205 0.15</cp>
+        <area>8.08255</area>
+        <upward>0 0 1</upward>
+        <control_joint_rad_to_cl>-2.0</control_joint_rad_to_cl>
+        <forward>1 0 0</forward>
+        <link_name>cessna_with_camera/base_link</link_name>
+        <control_joint_name>cessna_with_camera/left_aileron_joint</control_joint_name>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <plugin name='propeller_bottom_blade' filename='libLiftDragPlugin.so'>
+        <a0>0.4</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0</cma>
+        <alpha_stall>1.5</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.37 0 -0.77</cp>
+        <area>.0001</area>
+        <air_density>1.2041</air_density>
+        <forward>0 1 0</forward>
+        <upward>1 0 0</upward>
+        <link_name>cessna_with_camera/propeller</link_name>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <plugin name='propeller_top_blade' filename='libLiftDragPlugin.so'>
+        <a0>0.4</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0</cma>
+        <alpha_stall>1.5</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.37 0 0.77</cp>
+        <area>.0001</area>
+        <air_density>1.2041</air_density>
+        <forward>0 -1 0</forward>
+        <upward>1 0 0</upward>
+        <link_name>cessna_with_camera/propeller</link_name>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <plugin name='right_aileron_plugin' filename='libLiftDragPlugin.so'>
+        <a0>0.05984281113</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.1 -0.2205 0.15</cp>
+        <area>8.08255</area>
+        <upward>0 0 1</upward>
+        <control_joint_rad_to_cl>-2.0</control_joint_rad_to_cl>
+        <forward>1 0 0</forward>
+        <link_name>cessna_with_camera/base_link</link_name>
+        <control_joint_name>cessna_with_camera/right_aileron_joint</control_joint_name>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <plugin name='rudder_plugin' filename='libLiftDragPlugin.so'>
+        <a0>0.0</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.6 0 0.155</cp>
+        <area>.15329</area>
+        <upward>0 1 0</upward>
+        <control_joint_rad_to_cl>4.0</control_joint_rad_to_cl>
+        <forward>1 0 0</forward>
+        <link_name>cessna_with_camera/base_link</link_name>
+        <control_joint_name>cessna_with_camera/rudder_joint</control_joint_name>
+        <robotNamespace>/cessna1</robotNamespace>
+      </plugin>
+      <pose>-3.06177 7.81253 0 0 -0 0</pose>
+    </model>
+    <model name='zephyr_1'>
+      <pose>2.09075 9.3313 0 0 -0 0</pose>
+      <frame name='zephyr_delta_wing::__model__' attached_to='zephyr_delta_wing::wing'>
+        <pose relative_to='__model__'>0 0 0.2 0 -0 0</pose>
+      </frame>
+      <link name='zephyr_delta_wing::wing'>
+        <inertial>
+          <pose>0 -0.12 0 0 -0 0</pose>
+          <mass>1.5</mass>
+          <inertia>
+            <ixx>0.0831371</ixx>
+            <ixy>0</ixy>
+            <iyy>0.387382</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.469845</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://zephyr_delta_wing/meshes/wing.dae</uri>
+              <submesh>
+                <name>Wing</name>
+                <center>1</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='body_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://zephyr_delta_wing/meshes/wing.dae</uri>
+              <submesh>
+                <name>Wing</name>
+                <center>1</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='right_rudder_collision'>
+          <pose>-0.76435 0.33918 0.002 -0.03 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.005 0.12993 0.12688</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='left_rudder_collision'>
+          <pose>0.76435 0.33918 0.002 -0.03 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.005 0.12993 0.12688</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='zephyr_delta_wing::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='zephyr_delta_wing::zephyr/imu_link'>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.15</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2e-05</izz>
+          </inertia>
+        </inertial>
+        <sensor name='imu_sensor' type='imu'>
+          <pose>0 0 0 -3.14159 -0 -1.57079</pose>
+          <always_on>1</always_on>
+          <update_rate>1000</update_rate>
+          <imu/>
+        </sensor>
+        <pose relative_to='zephyr_delta_wing::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='zephyr_delta_wing::zephyr/imu_joint' type='revolute'>
+        <child>zephyr_delta_wing::zephyr/imu_link</child>
+        <parent>zephyr_delta_wing::wing</parent>
+        <axis>
+          <xyz expressed_in='zephyr_delta_wing::__model__'>0 0 1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0</upper>
+            <effort>0</effort>
+            <velocity>0</velocity>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='zephyr_delta_wing::propeller'>
+        <pose relative_to='zephyr_delta_wing::__model__'>0 0.07 0.008 0 1.57079 0</pose>
+        <inertial>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>0.000367571</ixx>
+            <ixy>0</ixy>
+            <iyy>0.00036985</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>3.187e-06</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://zephyr_delta_wing/meshes/wing.dae</uri>
+              <submesh>
+                <name>Propeller</name>
+                <center>1</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='blade1'>
+          <pose>0 0 0.074205 0 -0 0.3</pose>
+          <geometry>
+            <box>
+              <size>0.02561 0.00541 0.14841</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='blade2'>
+          <pose>0 0 -0.074205 0 0 -0.3</pose>
+          <geometry>
+            <box>
+              <size>0.02561 0.00541 0.14841</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='zephyr_delta_wing::flap_left'>
+        <pose relative_to='zephyr_delta_wing::__model__'>0.453 0.239 0.007 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0.324457</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000102319</ixx>
+            <ixy>0</ixy>
+            <iyy>0.00334417</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.00344607</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://zephyr_delta_wing/meshes/wing.dae</uri>
+              <submesh>
+                <name>Flap_Left</name>
+                <center>1</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>-0.01 0.01 0 0 -0 0.324457</pose>
+          <geometry>
+            <box>
+              <size>0.633463 0.110694 0.005</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='zephyr_delta_wing::flap_right'>
+        <pose relative_to='zephyr_delta_wing::__model__'>-0.453 0.239 0.007 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 -0.324457</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000102319</ixx>
+            <ixy>0</ixy>
+            <iyy>0.00334417</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.00344607</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://zephyr_delta_wing/meshes/wing.dae</uri>
+              <submesh>
+                <name>Flap_Right</name>
+                <center>1</center>
+              </submesh>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>0.01 0.01 0 0 0 -0.324457</pose>
+          <geometry>
+            <box>
+              <size>0.633463 0.110694 0.005</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='zephyr_delta_wing::propeller_joint' type='revolute'>
+        <parent>zephyr_delta_wing::wing</parent>
+        <child>zephyr_delta_wing::propeller</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <dynamics>
+            <damping>0.002</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='zephyr_delta_wing::flap_left_joint' type='revolute'>
+        <parent>zephyr_delta_wing::wing</parent>
+        <child>zephyr_delta_wing::flap_left</child>
+        <pose>0 -0.04 0 0 -0 0</pose>
+        <axis>
+          <xyz>1 0.330321 0</xyz>
+          <limit>
+            <lower>-0.524</lower>
+            <upper>0.524</upper>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='zephyr_delta_wing::flap_right_joint' type='revolute'>
+        <parent>zephyr_delta_wing::wing</parent>
+        <child>zephyr_delta_wing::flap_right</child>
+        <pose>0 -0.04 0 0 -0 0</pose>
+        <axis>
+          <xyz>1 -0.330321 0</xyz>
+          <limit>
+            <lower>-0.524</lower>
+            <upper>0.524</upper>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='invisible_canard' filename='libLiftDragPlugin.so'>
+        <a0>0.13</a0>
+        <cla>3.7</cla>
+        <cda>0.06417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>0 -0.1 0</cp>
+        <area>0.50</area>
+        <air_density>1.2041</air_density>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>zephyr_delta_wing::wing</link_name>
+      </plugin>
+      <plugin name='left_wing' filename='libLiftDragPlugin.so'>
+        <a0>0.15</a0>
+        <cla>6.8</cla>
+        <cda>0.06417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.6391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>0.7 0.20 0</cp>
+        <area>0.10</area>
+        <air_density>1.2041</air_density>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>zephyr_delta_wing::wing</link_name>
+        <control_joint_name>zephyr_delta_wing::flap_left_joint</control_joint_name>
+        <control_joint_rad_to_cl>-5.0</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='right_wing' filename='libLiftDragPlugin.so'>
+        <a0>0.15</a0>
+        <cla>6.8</cla>
+        <cda>0.06417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.6391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.7 0.20 0</cp>
+        <area>0.10</area>
+        <air_density>1.2041</air_density>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>zephyr_delta_wing::wing</link_name>
+        <control_joint_name>zephyr_delta_wing::flap_right_joint</control_joint_name>
+        <control_joint_rad_to_cl>-5.0</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='left_rudder' filename='libLiftDragPlugin.so'>
+        <a0>0.0</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.76 0.30 0.025</cp>
+        <area>0.12</area>
+        <air_density>1.2041</air_density>
+        <forward>0 -1 0</forward>
+        <upward>1 0 0</upward>
+        <link_name>zephyr_delta_wing::wing</link_name>
+      </plugin>
+      <plugin name='right_rudder' filename='libLiftDragPlugin.so'>
+        <a0>0.0</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>-1.8</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>0.76 0.30 0.025</cp>
+        <area>0.12</area>
+        <air_density>1.2041</air_density>
+        <forward>0 -1 0</forward>
+        <upward>1 0 0</upward>
+        <link_name>zephyr_delta_wing::wing</link_name>
+      </plugin>
+      <plugin name='propeller_blade_1' filename='libLiftDragPlugin.so'>
+        <a0>0.30</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.02</area>
+        <air_density>1.2041</air_density>
+        <cp>0 0 0.074205</cp>
+        <forward>-1 0 0</forward>
+        <upward>0 -1 0</upward>
+        <link_name>zephyr_delta_wing::propeller</link_name>
+      </plugin>
+      <plugin name='propeller_blade_2' filename='libLiftDragPlugin.so'>
+        <a0>0.30</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.02</area>
+        <air_density>1.2041</air_density>
+        <cp>0 0 -0.074205</cp>
+        <forward>1 0 0</forward>
+        <upward>0 -1 0</upward>
+        <link_name>zephyr_delta_wing::propeller</link_name>
+      </plugin>
+      <link name='skid_pad'>
+        <pose>0 -0.07 -0.02 0 -0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.00431371</ixx>
+            <ixy>0</ixy>
+            <iyy>0.00387382</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>0.00809845</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='skid_pad'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.5 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>100000</kp>
+                <kd>1</kd>
+                <min_depth>0.01</min_depth>
+                <max_vel>1</max_vel>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <fdir1>0 1 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='skid_pad_joint' type='fixed'>
+        <parent>zephyr_delta_wing::wing</parent>
+        <child>skid_pad</child>
+        <axis>
+          <limit>
+            <lower>0</lower>
+            <upper>0</upper>
+          </limit>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+        </axis>
+      </joint>
+      <plugin name='ardupilot_plugin' filename='libArduPilotPlugin.so'>
+        <fdm_addr>127.0.0.1</fdm_addr>
+        <fdm_port_in>9012</fdm_port_in>
+        <fdm_port_out>9013</fdm_port_out>
+        <modelXYZToAirplaneXForwardZDown>0 0 0 3.141593 0 0</modelXYZToAirplaneXForwardZDown>
+        <gazeboXYZToNED>0 0 0 3.141593 0 0</gazeboXYZToNED>
+        <imuName>zephyr_1::zephyr_delta_wing::zephyr/imu_link::imu_sensor</imuName>
+        <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+        <control channel='2'>
+          <multiplier>838</multiplier>
+          <offset>0.2</offset>
+          <type>VELOCITY</type>
+          <p_gain>0.5</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.0</cmd_max>
+          <cmd_min>0.0</cmd_min>
+          <jointName>zephyr_delta_wing::propeller_joint</jointName>
+        </control>
+        <control channel='0'>
+          <multiplier>-1</multiplier>
+          <offset>-0.5</offset>
+          <type>POSITION</type>
+          <p_gain>10.0</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.0</cmd_max>
+          <cmd_min>-2.0</cmd_min>
+          <jointName>zephyr_delta_wing::flap_left_joint</jointName>
+        </control>
+        <control channel='1'>
+          <multiplier>-1</multiplier>
+          <offset>-0.5</offset>
+          <type>POSITION</type>
+          <p_gain>10.0</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.0</cmd_max>
+          <cmd_min>-2.0</cmd_min>
+          <jointName>zephyr_delta_wing::flap_right_joint</jointName>
+        </control>
+      </plugin>
+      <sensor name='gps_sensor' type='gps'>
+        <pose>0 0 0 0 0 0</pose>
+        <update_rate>10.0</update_rate>
+        <always_on>1</always_on>
+        <gps>
+          <position_sensing>
+            <horizontal>
+              <noise type='gaussian_quantized'>
+                <mean>0</mean>
+                <stddev>1</stddev>
+                <bias_mean>3</bias_mean>
+                <bias_stddev>1</bias_stddev>
+                <precision>0.5</precision>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type='gaussian_quantized'>
+                <mean>0</mean>
+                <stddev>1</stddev>
+                <bias_mean>3</bias_mean>
+                <bias_stddev>1</bias_stddev>
+                <precision>1.0</precision>
+              </noise>
+            </vertical>
+          </position_sensing>
+          <velocity_sensing>
+            <horizontal>
+              <noise type='gaussian_quantized'>
+                <mean>0</mean>
+                <stddev>0.1</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.1</bias_stddev>
+                <precision>0.1</precision>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type='gaussian_quantized'>
+                <mean>0</mean>
+                <stddev>0.2</stddev>
+                <bias_mean>0.2</bias_mean>
+                <bias_stddev>0.2</bias_stddev>
+                <precision>0.2</precision>
+              </noise>
+            </vertical>
+          </velocity_sensing>
+        </gps>
+      </sensor>
+    </model>
+  </world>
+</sdf>
